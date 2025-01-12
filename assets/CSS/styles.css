@@ -263,6 +263,23 @@ que los items aparezcan de manera escalonada por tiempo*/
     text-align: right; /*Para mover la imagen a la derecha*/
     top: 0;
     right: 0;
+
+    /*1. ANIMACION*/
+    /*Quiero que surga desde la derecha*/
+    animation-name: showRight;
+    animation-duration: 1s;
+}
+
+/*1. PARA ANIMACION*/
+@keyframes showRight{
+    0%{ /*Al inicio*/
+        /*Aplico una transformacion para mover el elemento*/
+        transform: translateX(50%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
 }
 
 
@@ -270,7 +287,25 @@ que los items aparezcan de manera escalonada por tiempo*/
     /*Para que este abajo y a la izquierda*/
     bottom: 0;
     left: 0;
+
+        /*2. ANIMACION*/
+    /*Quiero que surga desde la izquierda*/
+    animation-name: showLeft;
+    animation-duration: 1s;
 }
+
+/*2. PARA ANIMACION*/
+@keyframes showLeft{
+    0%{ /*Al inicio*/
+        /*Aplico una transformacion para mover el elemento*/
+        transform: translateX(-50%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+}
+
 
 .shapes__item--shape3{
     /*Esto coloca una burbuja blanca en un sitio*/
@@ -307,6 +342,23 @@ que los items aparezcan de manera escalonada por tiempo*/
     top: 0; /*Mueve arriba o abajo*/
     right:10rem;
     z-index: 1;
+
+    /*3. ANIMACION*/
+    /*Quiero que surga desde arriba*/
+    animation: showTop 1s;
+
+}
+
+/*3. PARA ANIMACION*/
+@keyframes showTop{
+    0%{ /*Al inicio*/
+        /*Aplico una transformacion para mover el elemento*/
+        transform: translateY(-50%);
+    }
+
+    100%{
+        transform: translateY(0%);
+    }
 }
 
 
