@@ -208,16 +208,18 @@ que los items aparezcan de manera escalonada por tiempo*/
     overflow: hidden;
     background-color: var(--color-banner);
     
-    border: 2px solid red;
+ 
 
-    z-index: 2;
+    z-index: 1;
 
 }
 
 .banner__content{
+    position: relative; /*Coloco esto porque si no el index no funciona*/
     display: inline-block;
     width: 50%;
-    padding: 0 1.5rem; 
+    padding: 0 1.5rem;
+    z-index: 3; 
 }
 
 .banner__title{
@@ -254,7 +256,7 @@ que los items aparezcan de manera escalonada por tiempo*/
 
 .shapes__item{
     position: absolute; /*Para controlar totalmente*/
-    z-index: -1;
+    z-index: 2;
 }
 
 .shapes__item--shape1{
@@ -262,6 +264,52 @@ que los items aparezcan de manera escalonada por tiempo*/
     top: 0;
     right: 0;
 }
+
+
+.shapes__item--shape2{
+    /*Para que este abajo y a la izquierda*/
+    bottom: 0;
+    left: 0;
+}
+
+.shapes__item--shape3{
+    /*Esto coloca una burbuja blanca en un sitio*/
+   top: 34%; /*Mover hacia arriba o abajo aumentando o disminuyendo el % */
+   left: 50%;
+}
+
+.shapes__item--shape4{
+    /*Esto coloca una burbuja morada en un sitio*/
+    bottom: 24rem; /*Mueve arriba o abajo*/
+    left: 45%;
+}
+
+.shapes__item--shape4 .shapes__img{
+    /*Esto porque en el diseño original la burbuja tiene menor opacidad*/
+    opacity: 0.5;
+    width: 7.5rem;
+}
+
+.shapes__item--shape5{
+    /*Esto coloca una burbuja morada en un sitio*/
+    bottom: 12rem; /*Mueve arriba o abajo*/
+    left: 53%;
+}
+
+.shapes__item--shape6{
+    /*Esto coloca una burbuja morada en un sitio*/
+    bottom: 10rem; /*Mueve arriba o abajo*/
+    left: 40%;
+}
+
+.shapes__item--shape7{
+    /*Esto coloca una burbuja morada en un sitio*/
+    top: 0; /*Mueve arriba o abajo*/
+    right:10rem;
+    z-index: 1;
+}
+
+
 
 
 
