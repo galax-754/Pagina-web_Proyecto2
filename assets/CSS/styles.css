@@ -311,12 +311,56 @@ que los items aparezcan de manera escalonada por tiempo*/
     /*Esto coloca una burbuja blanca en un sitio*/
    top: 34%; /*Mover hacia arriba o abajo aumentando o disminuyendo el % */
    left: 50%;
+
+   /*4. ANIMACION*/
+   animation: moveShape3 20s infinite;
+}
+
+/*4. ANIMACION*/
+@keyframes moveShape3{
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+
+    40%{
+        transform: translateX(50px) translateY(-200px);
+    }
+
+    75%{
+        transform: translateX(800px);
+    }
+
+    100%{
+        transform: translateX(0) translateY(0);
+    }
 }
 
 .shapes__item--shape4{
     /*Esto coloca una burbuja morada en un sitio*/
     bottom: 24rem; /*Mueve arriba o abajo*/
     left: 45%;
+
+    /*5. ANIMACION*/
+    animation: moveShape4 30s infinite;
+}
+
+/*5. ANIMACION*/
+@keyframes moveShape4{
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+
+    40%{
+        transform: translateX(-50px) translateY(200px);
+    }
+
+    75%{
+        transform: translateX(-500px);
+    }
+
+    100%{
+        transform: translateX(0) translateY(0);
+    }
 }
 
 .shapes__item--shape4 .shapes__img{
@@ -329,12 +373,40 @@ que los items aparezcan de manera escalonada por tiempo*/
     /*Esto coloca una burbuja morada en un sitio*/
     bottom: 12rem; /*Mueve arriba o abajo*/
     left: 53%;
+    opacity: 0.7;
+
+    /*6. ANIMACION*/
+    animation: moveShape5 45s infinite;
 }
+
+/*6. ANIMACION*/
+@keyframes moveShape5{
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+
+    40%{
+        transform: translateX(-600px) translateY(-500px);
+    }
+
+    75%{
+        transform: translateX(30px) translateY(-800px);
+    }
+
+    100%{
+        transform: translateX(0) translateY(0);
+    }
+}
+
+
 
 .shapes__item--shape6{
     /*Esto coloca una burbuja morada en un sitio*/
     bottom: 10rem; /*Mueve arriba o abajo*/
     left: 40%;
+
+    /*7. ANIMACION*/
+    animation: moveShape3 35s infinite;
 }
 
 .shapes__item--shape7{
