@@ -7,6 +7,9 @@
 --color-banner: #2522BA;
 --color-text-btn: #0d6efd;
 --color-bg-btn: #ffdc6f; 
+--color-subtitle: #BD6A7A; 
+--color-title: #2A2B30; 
+--color-box: #FAFAFA; 
 
 }
 /*ESTILOS GENERALES A TODA LA WEB */
@@ -431,6 +434,44 @@ que los items aparezcan de manera escalonada por tiempo*/
     100%{
         transform: translateY(0%);
     }
+}
+
+
+/*ESTILOS SECCION SERVICIOS*/
+.layout__services{
+    position: relative;
+    margin: 5rem 4rem;
+    z-index: 1;
+
+    border: 1px solid blue;
+
+}
+
+.services__grid{
+    border: 1px solid red;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.services__header{
+    margin-bottom: 2rem;
+    text-align: left;
+    border: 1px solid black;
+}
+
+.services__subtitle{
+    font-size:  2rem;
+    color: var(--color-subtitle);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.services__title{
+    font-size: 6.4rem;
+    line-height: 1.2;
+    font-weight: 500;
+    color: var(--color-title);
+
 }
 
 
