@@ -474,6 +474,27 @@ que los items aparezcan de manera escalonada por tiempo*/
 
 }
 
+.services__list{
+    display:flex;
+    flex-direction: row;
+    gap: 3rem; /*Para tener espacio entre las cajas (Articulos)*/
+
+}
+
+.services__service{
+    width: 33%; /*Para que se extiendan las cajas en toda la caja mas grande, si no se quedan muy pegadas*/
+    padding: 5rem 4rem; /*Para que haya espacio dentro de las cajas*/
+    border-radius: 3rem;
+    margin-bottom: 3rem;
+
+    /*Para el degradado de las cajas (Articulos)*/
+    background: linear-gradient(180deg, #f8f8f8, rgba(255, 255, 255,0 ));
+    background-color: var(--color-secondary);
+
+    border: 1px solid;
+    border-image-source: linear-gradient(180deg, #f8f8f8, rgba(255, 255, 255, 0));
+
+}
 
 
 
