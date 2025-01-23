@@ -10,6 +10,7 @@
 --color-subtitle: #BD6A7A; 
 --color-title: #2A2B30; 
 --color-box: #FAFAFA; 
+--color-tarjeta-services: #f8f8f8;
 
 }
 /*ESTILOS GENERALES A TODA LA WEB */
@@ -488,13 +489,73 @@ que los items aparezcan de manera escalonada por tiempo*/
     margin-bottom: 3rem;
 
     /*Para el degradado de las cajas (Articulos)*/
-    background: linear-gradient(180deg, #f8f8f8, rgba(255, 255, 255,0 ));
+    background: linear-gradient(180deg, var(--color-tarjeta-services), rgba(255, 255, 255,0 ));
     background-color: var(--color-secondary);
 
     border: 1px solid;
-    border-image-source: linear-gradient(180deg, #f8f8f8, rgba(255, 255, 255, 0));
+    border-image-source: linear-gradient(180deg, var(--color-tarjeta-services), rgba(255, 255, 255, 0)); /*El 0 es para la opacidad*/
 
+    transition: all 300ms ease-in-out;
+
+    /*Esto porque quiero que los elementos se comporten como una fila, es decir la imagen y 
+    el texto que esten en fila y no uno arriba del otro*/
+    display: flex;
+    flex-direction: row;
 }
+
+/*Hover sirve para hacer efectos al pasar por encima del elemento*/
+.services__service:hover{
+    background-color: var(--color-tarjeta-services);
+    
+}
+
+.service__container-img{
+    margin-right: 2.5rem;
+    max-width: 8.5rem;
+    flex: 1; /*Para repartir el espacio entre service__content, usar esta propiedad es como si 
+    combinaras flex flow (para que el espacio se amplie a nivel 1), flex basis(estamos estableciendo esto en 0
+    es decir no estamos estableciendo ningun ancho al poner 1 en flex 1), y flex shrink (Para que encoja los elementos
+    de manera equitativa)*/
+}
+
+.service__content{
+    flex:1; /*Para repartir el espacio entre service__container-img*/
+}
+
+/*Estilos al encabezado*/
+.service__title{
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 3rem;
+}
+
+.service__description{
+    font-size: 1.7rem;
+
+    overflow: hidden; /*Para que ningun elemento se salga de la caja*/
+    margin-bottom: 4rem;
+}
+
+/*Estilos a Leer mas*/
+.service__more{
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    padding-left: 5rem;
+
+    transition: all 300ms ease-in-out;
+}
+
+.service__more:hover,
+.service__title:hover{
+    color: var(--color-primary);
+}
+
+
+
+
+
 
 
 
