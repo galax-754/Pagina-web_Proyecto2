@@ -485,8 +485,11 @@ que los items aparezcan de manera escalonada por tiempo*/
 .services__service{
     width: 33%; /*Para que se extiendan las cajas en toda la caja mas grande, si no se quedan muy pegadas*/
     padding: 5rem 4rem; /*Para que haya espacio dentro de las cajas*/
+    height: 100%; /*Para que la caja agarre un tamaño automatico de acuerdo al contenido de adentro,
+    asi si los muevo de lugar los elementos no se alargan*/
     border-radius: 3rem;
     margin-bottom: 3rem;
+
 
     /*Para el degradado de las cajas (Articulos)*/
     background: linear-gradient(180deg, var(--color-tarjeta-services), rgba(255, 255, 255,0 ));
@@ -524,6 +527,7 @@ que los items aparezcan de manera escalonada por tiempo*/
 
 /*Estilos al encabezado*/
 .service__title{
+    color:var(--color-title);
     font-size: 2.4rem;
     font-weight: 500;
     line-height: 1.4;
@@ -547,11 +551,40 @@ que los items aparezcan de manera escalonada por tiempo*/
     transition: all 300ms ease-in-out;
 }
 
+/*Colocar linea al lado de leer mas*/
+.service__more::before{
+    position: absolute;
+    top: 50%;
+    content: "";
+    width: 3.4rem;
+    height: 1.5px;
+    background-color: var(--color-text-body);
+    left: 0;
+    transition: all 300ms ease-in-out;
+}
+
 .service__more:hover,
 .service__title:hover{
     color: var(--color-primary);
 }
 
+.service__more:hover::before{
+    background-color: var(--color-primary);
+}
+
+/*Efecto escalonado en tarjetas usando los modificadores que habiamos puesto en HTML*/
+/*ESCALONADO DE TARJETAS DE SERVICIOS*/
+.services__service--bottom{
+    margin-top: 20rem;
+}
+
+.services__service--middle{
+    margin-top: 10rem;
+}
+
+.services__service--top{
+    margin-top: 0rem;
+}
 
 
 
