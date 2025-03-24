@@ -441,23 +441,22 @@ que los items aparezcan de manera escalonada por tiempo*/
 /*ESTILOS SECCION SERVICIOS*/
 .layout__services{
     position: relative;
-    margin: 5rem 4rem;
+    margin: 14rem 10rem;
     z-index: 1;
-
-    border: 1px solid blue;
-
+    
 }
 
 .services__grid{
-    border: 1px solid red;
-    max-width: 1320px;
+
+    max-width: 1700px;
     margin: 0 auto;
+
 }
 
 .services__header{
     margin-bottom: 2rem;
     text-align: left;
-    border: 1px solid black;
+
 }
 
 .services__subtitle{
@@ -588,8 +587,30 @@ que los items aparezcan de manera escalonada por tiempo*/
 
 
 
+/*FORMAS DETRAS DE LOS SERVICIOS*/
+.service-shapes__item{
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+
+}
+
+.service-shapes--shape1{
+    top: -8%;
+    right: 7%;
+
+}
 
 
+.service-shapes--shape2{
+    top: 10%;
+    left: 56%;
+}
+
+.service-shapes--shape3{
+    top:34%;
+    left: 5%;
+}
 
 
 
