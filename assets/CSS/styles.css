@@ -12,6 +12,9 @@
 --color-box: #FAFAFA; 
 --color-tarjeta-services: #f8f8f8;
 --color-bg-projects: #ecf2f6; 
+--color-bg-dark:#27272E; 
+--color-text-description: #99A1AA;
+--color-hover-dark: #303035; 
 
 /*Medida*/
 --mx-width: 1320px; 
@@ -448,6 +451,7 @@ que los items aparezcan de manera escalonada por tiempo*/
 .layout__services{
     position: relative;
     margin: 14rem 10rem;
+    margin-bottom: 9rem;
     z-index: 1;
     
 }
@@ -466,7 +470,8 @@ que los items aparezcan de manera escalonada por tiempo*/
 }
 
 .services__subtitle,
-.projets__subtitle{
+.projets__subtitle,
+.stats__subtitle{
     font-size:  2rem;
     color: var(--color-subtitle);
     font-weight: bold;
@@ -474,7 +479,8 @@ que los items aparezcan de manera escalonada por tiempo*/
 }
 
 .services__title,
-.projects__title{
+.projects__title,
+.stats__title{
     font-size: 6.4rem;
     line-height: 1.2;
     font-weight: 500;
@@ -742,4 +748,86 @@ que los items aparezcan de manera escalonada por tiempo*/
 .project-shapes--shape3{
         top: 38%;
         left: 5%;
+}
+
+
+/*ESTILOS SECCION ESTADISTICAS*/
+.layout__stats{
+    background-color: var(--color-bg-dark);
+    padding: 14rem 11rem;
+
+}
+
+.stats__container{
+    max-width: var(--mx-width);
+    margin: 0 auto;
+}
+
+.stats__header{
+    text-align: center;
+}
+
+.stats__title{
+    font-size: 6.4rem;
+    color:var(--color-secondary);
+    margin-bottom: 3rem;
+}
+
+
+.stats__description{
+    font-size: 2rem;
+    width: 60%;
+    margin: 0 auto; /*Para posicionar el texto al centro*/
+    color: var(--color-text-description);
+}
+
+.stats__progress{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem /*Para separar los elementos unos 30 pixeles cada uno entre ellos*/;
+}
+
+.stats__stat{
+    width: 25%; /*Para que los elementos se distribuyan de mejor manera*/
+    text-align: center;
+    border-radius: 2rem;
+    padding: 7rem 2rem;
+    border: 1px solid transparent;
+
+}
+
+.stats__stat:hover{
+    background: linear-gradient(180deg, var(--color-bg-dark), var(--color-hover-dark));
+    border: 1px solid var(--color-hover-dark)
+}
+
+.stat__icon{
+
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.stat__icon>img{
+
+    margin: 0 auto;
+    text-align: center;
+}
+
+.stat__count{
+    display: inline-block;
+    font-size: 6.4rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.stat__title{
+    text-align: center;
+    color: var(--color-secondary);
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.2;
+    
 }
